@@ -2,6 +2,8 @@
 
 ### Week 1
 
+Welcome to the first week of Bit project's React Bitcamp. My name is Henry Starman and I'll be showing you how to build front end web applications using one of the most popular front end frameworks, React.js
+
 #### What is React?
 
 It is a JavaScript Library Developed by Facebook used for constructing user interfaces.
@@ -15,13 +17,13 @@ Why is it so special?
 - Easy to make front end framework
 - dynamic at its core
 
-```javascript
+```react
 const hello = <h1>Hello Bit Squad!</h1>
 ```
 
-Above is something you might see in a react project. This is called JSX (JavaScript XML). It is a combination of JavaScript and HTML and it was allows is to write HTML in React. You will not be able to write this in a plain JS or HTML file (try to run and show that it fails)
+Above is something you'll see in a react project. This is called JSX (JavaScript XML). It is a combination of JavaScript and HTML and it is what allows us to write HTML in React. You will not be able to write this in a plain JS or HTML file (try to run and show that it fails)
 
-```javascript
+```react
 import React from 'react'
 
 const hello = <h1>Hello Bit Squad!</h1>
@@ -31,7 +33,7 @@ If we import React then we are able to run the file so the JSX is secretly using
 
 Right now we can't see our greeting and that's because it's not being rendered
 
-```javascript
+```react
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -45,15 +47,15 @@ ReactDOM.render(
 
 The way that we render our project is through the ReactDOM. The render method takes two required arguments, a JSX element and a container for the JSX. Within index.html we'll see this line:
 
-```html
+```react
 <div id="root"></div>
 ```
 
-The ReactDOM will place our 'hello' element within the root div container.  (There are also a few other API calls with ReactDOM {`hydrate()`, `unmountComponentAtNode()`, `findDOMNode()`, `createPortal()` } but we won't be going over them)
+The ReactDOM will place our 'hello' element within the root div container.  (There are also a few other API calls within ReactDOM {`hydrate()`, `unmountComponentAtNode()`, `findDOMNode()`, `createPortal()` } but we won't be going over them)
 
 But what if we want to add more than just one line into the HTML?
 
-```javascript
+```react
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -70,7 +72,7 @@ ReactDOM.render(
 
 We have to wrap our JSX in parentheses and then we can write a multiline JSX element. However, the element has to be just one item! So the above will not work. But, what if we try placing all of our items in a box? A box is technically one entity...
 
-```javascript
+```react
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -93,7 +95,7 @@ The <div> tags can be used as our boxes, but container is the proper term so I'l
 
 JSX elements can have attributes just like HTML elements and they are written much in the same way,
 
-```javascript
+```react
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -121,9 +123,9 @@ Create your own JSX
 
 ### JSX-less React
 
-However the attributes are not identical to what they are in pure HTML. JSX uses camelCase so onclick is changed to onClick and there are some reserved words that are not allowed in JSX like class. If you want to add class names to a JSX elements you have to write className instead. This is because JSX is actually just syntactic sugar. All of your JSX first gets compiled to a React API call. That being React.createElement(...).
+However the attributes are not identical to what they are in pure HTML. JSX uses camelCase so `onclick` is changed to `onClick` and there are some reserved words that are not allowed in JSX like class. If you want to add class names to a JSX elements you have to write `className` instead. This is because JSX is actually just syntactic sugar. All of your JSX first gets compiled to a React API call. That being `React.createElement(...)`.
 
-```javascript
+```react
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -137,9 +139,9 @@ ReactDOM.render(
 )
 ```
 
-The central argument createElement takes are the attributes of the element as an object. So if I were to add an id it would look like this
+The central argument of `createElement` takes the attributes of the element as an object. So if I were to add an id it would look like this
 
-```javascript
+```react
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -155,7 +157,7 @@ ReactDOM.render(
 
 But if we do class...
 
-```javascript
+```react
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -169,11 +171,11 @@ ReactDOM.render(
 )
 ```
 
-Then it will still work on modern JavaScript but breaks on older versions so the Developers of React chose to go with className. Here we also see why we have to import React when using JSX, because once compiled, it gets translated to a call to the React API
+Then it will actually still work on modern JavaScript but breaks on older versions so the Developers of React chose to go with `className`. Here we also see why we have to import React when using JSX, because once compiled, it gets translated to a call to the React API
 
-The more astute of you may have already noticed that because JSX is just syntactic sugar then you don't actually have to use it. And that's correct. Heres an earlier example with all the JXS replaced
+The more astute of you may have already noticed that because JSX is just syntactic sugar then you don't actually have to use it. And that's correct. Here's an earlier example with all the JXS replaced
 
-```javascript
+```react
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -190,9 +192,9 @@ ReactDOM.render(
 
 But you either already know or *should* know HTML so I'd recommend using JSX. I also think the JSX looks much nicer (fyi you can do something like `e = React.createElement`to make the non JSX version look a bit cleaner too)
 
-Only the differences get updated when calling ReactDOM.render, so
+Only the differences get updated when calling `ReactDOM.render`, so
 
-```javascript
+```react
 const hello = <h1>Hello world</h1>;
 
 // This will add "Hello world" to the screen:
@@ -208,9 +210,9 @@ This is also where I want to say, JSX elements are treated as JS expressions and
 
 ### Self Closing Tags
 
-Another small difference between HTML and JSX is that if you use any self closing tags you need to place the '/' before the end of the tag. It is legal to leave it out in HTML but its required in JSX, heres an example.
+Another small difference between HTML and JSX is that if you use any self closing tags you need to place the '/' before the end of the tag. It is legal to leave it out in HTML but its required in JSX, here's an example.
 
-```html
+```react
 Fine in HTML with a slash:
 
   <br />
@@ -220,7 +222,7 @@ Also fine, without the slash:
   <br>
 ```
 
-```html
+```react
 Fine in JSX:
 
   <br />
@@ -234,7 +236,7 @@ NOT FINE AT ALL in JSX:
 
 Now we finally get to creating functional components in React. A functional component is basically just a JavaScript function. The naming convention for all React components is camel case and starting with a capital letter.
 
-```javascript
+```react
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -243,9 +245,9 @@ function App() {
 }
 ```
 
-Another rule of functional components is they have to **return** some JSX to be rendered. In ReactDOM.render we can create an instance of our component by writing its name and wrapping it in JXS tags.
+Another rule of functional components is they have to **return** some JSX to be rendered. In `ReactDOM.render` we can create an instance of our component by writing its name and wrapping it in JXS tags.
 
-```javascript
+```react
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -288,7 +290,7 @@ Let's say we have `App.js` and `index.js` side by side and we want to export our
 
 **App.js**
 
-```javascript
+```react
 import React from 'react'
 
 function App() {
@@ -310,7 +312,7 @@ export default App
 
 **index.js**
 
-```javascript
+```react
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './App'
@@ -323,15 +325,15 @@ ReactDOM.render(
 
 **EXERCISE**
 
-1. Set up `index.js`
+1. Set up `index.js` and `App.js` as above
 
-If you are familiar with ES6 JavaScript which you guys probably should be then exporting in this way ought be second nature. Once a component is imported, you create an instance of it in the same way as we saw before. This allows us to keep ReactDOM.render within index and importing and rendering the main file.
+If you are familiar with ES6 JavaScript which you guys probably should be then exporting in this way ought be second nature. Once a component is imported, you create an instance of it in the same way as we saw before. This allows us to keep `ReactDOM.render` within index and importing and rendering the main file.
 
 ### Creating a Tree
 
 Let's go back to `App.js`, If this were an actual website we'd probably want to have something like nav bar with some links to other parts of the website and probably also a footer which contains some information, maybe a link to an FAQ page and some other related links. So let's create a starter template for these.
 
-```javascript
+```react
 import React from 'react'
 
 function App() {
@@ -365,7 +367,7 @@ It doesn't make sense to write websites like this because its gonna get unbearab
 
 **MyNavBar.js**
 
-```javascript
+```react
 import React from 'react'
 
 function MyNavBar() {
@@ -387,7 +389,7 @@ export default MyNavBar
 
 **MyMain.js**
 
-```javascript
+```react
 import React from 'react'
 
 function MyMain() {
@@ -409,7 +411,7 @@ export default MyMain
 
 **MyFooter.js**
 
-```javascript
+```react
 import React from 'react'
 
 function MyFooter() {
@@ -427,7 +429,7 @@ We'll place all of the files above into the components folder. For a real websit
 
 **Then in App.js**
 
-```javascript
+```react
 import React from 'react'
 import MyNavBar from './components/MyNavBar'
 import MyMain from './components/MyMain'
@@ -454,7 +456,7 @@ A navbar is composed of many parts, It typically has a logo, some links to other
 
 **NavLinks.js**
 
-```javascript
+```react
 import React from 'react'
 
 function NavLinks() {
@@ -471,7 +473,7 @@ export default NavLinks
 
 **MyNavBar.js**
 
-```javascript
+```react
 import React from 'react'
 import NavLinks from './NavLinks'
 
@@ -506,7 +508,7 @@ Time to talk about JavaScript injections in JSX. Going from JSX to JavaScript an
 
 All of our components up the this point begin with a return statement, but as programmers we know that a lot of code can come before the return statement and earlier we saw that we could assign JSX to variables because JSX is treated as a JavaScript expression. So let's explore this a bit more by creating a new `App.js` file
 
-```javascript
+```react
 import React from 'react'
 
 function App() {
@@ -524,46 +526,40 @@ function App() {
 export default App
 ```
 
-If you insert curly braces in JSX, you'll be able to write JavaScript between then. Obviously, If the braces were removed here then it will literally be interpreted as `Let's all give a warm welcome to firstName + " " + lastName!`. This gives JSX a lot of power, but because of the way JSX it is compiled there is a small caveat. We'll get into that right after we tackle event handling.
+If you insert curly braces in JSX, you'll be able to write JavaScript between then. Obviously, If the braces were removed here then it will literally be interpreted as `Let's all give a warm welcome to firstName + " " + lastName!`. This gives JSX a lot of power, but because of the way JSX is compiled there is a small caveat. We'll get into that right after we tackle event handling.
 
 ### Event Handling
 
-In the code we are simply rendering an image of a cat and when you click on the cat it turns into a dog. We do this with the `onClick` attribute. As stated before, JSX attributes have to be written in camel case. Then we set `onClick` equal to our handler function, and we can achieve this by first wrapping it in curly braces for a JavaScript injection!
+In the code we are simply rendering a button and when you click on the button it's class attribute toggled to changed its color. We do this with the `onClick` attribute. As stated before, JSX attributes have to be written in camel case. Then we set `onClick` equal to our handler function, and we can achieve this by first wrapping it in curly braces for a JavaScript injection!
 
-```javascript
+```react
 import React from "react";
-import "./styles.css";
 
-//This one might get changed later
 function App() {
-  function makeDoggy(e) {
-    e.target.setAttribute(
-      "src",
-      "https://s3.amazonaws.com/codecademy-content/courses/React/react_photo-puppy.jpeg"
-    );
-    e.target.setAttribute("alt", "doggy");
+  const toggleColor = (e) => {
+    const currColor = e.target.getAttribute("class")
+    const newColor = currColor === "green" ? "blue" : "green"
+    e.target.setAttribute("class", newColor)
   }
 
   return (
-    <img
-      src="https://s3.amazonaws.com/codecademy-content/courses/React/react_photo-kitty.jpg"
-      alt="kitty"
-      onClick={makeDoggy}
-    />
-  );
+    <div>
+      <h1>Bitcamp React</h1>
+      <button className="blue" onClick={toggleColor}>
+        Toggle Color
+      </button>
+    </div>
+  )
 }
-/* CSS
-img {
-  position: fixed;
-  width: 90%;
-  top: 5%;
-  left: 5%;
-  cursor: pointer;
-}
-*/
 
 export default App
 ```
+
+EXERCISE
+
+1. Render a button with a colored className (red/blue/green/black)
+2. Give it an `onClick` attribute set to an event function
+3. create an event function which changes the target's colored `className`
 
 ### JSX Conditionals
 
@@ -571,7 +567,7 @@ export default App
 
 Let's get back to that small caveat, you cannot use if statements inside of JSX :(
 
-```javascript
+```react
 import React from 'react'
 
 function App() {
@@ -598,7 +594,7 @@ export default App
 
 The above code will not execute and will return errors! But fear not, there are several work arounds to this! Personally, I think it's best that you are unable to do this, because it makes the code more ugly and harder to read anyway. We'll try putting the if statement before the return  and see how well that works.
 
-```javascript
+```react
 import React from 'react'
 
 function App() {
@@ -626,11 +622,11 @@ The above is an easy fix to the problem. Here I made a new variable called `gree
 
 ### Ternary Operator
 
-```javascript
+```react
 import React from 'react'
 
 function App() {
-    myMoney = 70
+    const myMoney = 70
     
     return (
     	<h1>
@@ -648,7 +644,7 @@ Many of you have heard of the ternary operator but maybe you are the the type of
 
 Next we have the `&&` operator. This operator is used when you want something to render sometimes but not all the time. For example, let's say you want to give the user of your app a notification that tells them how many unread messages they have but you don't want to show that notification when they have no unread message...
 
-```javascript
+```react
 import React from 'react'
 
 function Mailbox() {
@@ -672,7 +668,7 @@ If `unreadMessages.length > 0` then the <h2> will be rendered, otherwise it will
 
 A very useful array method for JSX is`.map()`and it comes up often in React. Creating a list of JSX elements is straight forward with `.map()`. Here I'll just make a list of some foods I like and quickly map them to JSX with ease without having to repeatedly type <li> over and over.
 
-```javascript
+```react
 import React from 'react'
 
 function App() {
@@ -684,7 +680,7 @@ function App() {
     ]
     
     const favFoodsJSX = favoriteFoods.map(food => {
-        <li>{food}</li>
+        return <li>{food}</li>
     })
     
     return (
@@ -696,6 +692,8 @@ function App() {
 		</div>
     )
 }
+
+export default App
 ```
 
 #### Keys in JSX
@@ -704,7 +702,7 @@ When making JSX lists sometimes we'll want to include the `key` attribute. The v
 
 Keys are very simple to implement and can be done alongside `.map()`
 
-```javascript
+```react
 import React from 'react'
 
 function App() {
@@ -716,7 +714,7 @@ function App() {
     ]
     
     const favFoodsJSX = favoriteFoods.map((food, i) => {
-        <li key={'food_${i}'}>{food}</li>
+        return <li key={'food_${i}'}>{food}</li>
     })
     
     return (
@@ -728,6 +726,8 @@ function App() {
 		</div>
     )
 }
+
+export default App
 ```
 
 The `.map()`method takes a second optional argument which is the array index of the current element. So we can simply provide a descriptor and the array index to each list-item's key for a unique identifier. The usefulness of keys will become more concrete once we create our own Todo list.

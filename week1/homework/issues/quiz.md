@@ -32,7 +32,7 @@
 
 3. **What's wrong with this code?**
 
-   ```react
+   ```jsx
    let skateboard = (
    	<img src="bitcamp.jpg" />
        <h1>Can't wait to start using React!</h1>
@@ -53,7 +53,7 @@
 
 4. **What is the correct way to attach the function `yo` to a click event?**
 
-   ```react
+   ```jsx
    const yo = () => {
        alert('Yo')
    }
@@ -75,7 +75,7 @@
 
    a.
 
-   ```react
+   ```jsx
    ReactDOM.render(
    	<h1>10 * 10</h1>,
    	document.getElementById('root')
@@ -84,7 +84,7 @@
 
    b. 
 
-   ```react
+   ```jsx
    ReactDOM.render(
    	<h1>{10} * {10}</h1>,
    	document.getElementById('root')
@@ -93,7 +93,7 @@
 
    c. 
 
-   ```react
+   ```jsx
    ReactDOM.render(
    	<h1>{10 * 10}</h1>,
    	document.getElementById('root')
@@ -102,7 +102,7 @@
 
    d.
 
-   ```react
+   ```jsx
    ReactDOM.render(
    	{<h1>10 * 10</h1>},
    	document.getElementById('root')

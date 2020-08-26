@@ -17,13 +17,13 @@ Why is it so special?
 - Easy to make front end framework
 - dynamic at its core
 
-```react
+```jsx
 const hello = <h1>Hello Bit Squad!</h1>
 ```
 
 Above is something you'll see in a react project. This is called JSX (JavaScript XML). It is a combination of JavaScript and HTML and it is what allows us to write HTML in React. You will not be able to write this in a plain JS or HTML file (try to run and show that it fails)
 
-```react
+```jsx
 import React from 'react'
 
 const hello = <h1>Hello Bit Squad!</h1>
@@ -33,7 +33,7 @@ If we import React then we are able to run the file so the JSX is secretly using
 
 Right now we can't see our greeting and that's because it's not being rendered
 
-```react
+```jsx
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -47,7 +47,7 @@ ReactDOM.render(
 
 The way that we render our project is through the ReactDOM. The render method takes two required arguments, a JSX element and a container for the JSX. Within index.html we'll see this line:
 
-```react
+```jsx
 <div id="root"></div>
 ```
 
@@ -55,7 +55,7 @@ The ReactDOM will place our 'hello' element within the root div container.  (The
 
 But what if we want to add more than just one line into the HTML?
 
-```react
+```jsx
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -72,7 +72,7 @@ ReactDOM.render(
 
 We have to wrap our JSX in parentheses and then we can write a multiline JSX element. However, the element has to be just one item! So the above will not work. But, what if we try placing all of our items in a box? A box is technically one entity...
 
-```react
+```jsx
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -95,7 +95,7 @@ The <div> tags can be used as our boxes, but container is the proper term so I'l
 
 JSX elements can have attributes just like HTML elements and they are written much in the same way,
 
-```react
+```jsx
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -125,7 +125,7 @@ Create your own JSX
 
 However the attributes are not identical to what they are in pure HTML. JSX uses camelCase so `onclick` is changed to `onClick` and there are some reserved words that are not allowed in JSX like class. If you want to add class names to a JSX elements you have to write `className` instead. This is because JSX is actually just syntactic sugar. All of your JSX first gets compiled to a React API call. That being `React.createElement(...)`.
 
-```react
+```jsx
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -141,7 +141,7 @@ ReactDOM.render(
 
 The central argument of `createElement` takes the attributes of the element as an object. So if I were to add an id it would look like this
 
-```react
+```jsx
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -157,7 +157,7 @@ ReactDOM.render(
 
 But if we do class...
 
-```react
+```jsx
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -175,7 +175,7 @@ Then it will actually still work on modern JavaScript but breaks on older versio
 
 The more astute of you may have already noticed that because JSX is just syntactic sugar then you don't actually have to use it. And that's correct. Here's an earlier example with all the JXS replaced
 
-```react
+```jsx
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -194,7 +194,7 @@ But you either already know or *should* know HTML so I'd recommend using JSX. I 
 
 Only the differences get updated when calling `ReactDOM.render`, so
 
-```react
+```jsx
 const hello = <h1>Hello world</h1>;
 
 // This will add "Hello world" to the screen:
@@ -212,7 +212,7 @@ This is also where I want to say, JSX elements are treated as JS expressions and
 
 Another small difference between HTML and JSX is that if you use any self closing tags you need to place the '/' before the end of the tag. It is legal to leave it out in HTML but its required in JSX, here's an example.
 
-```react
+```jsx
 Fine in HTML with a slash:
 
   <br />
@@ -222,7 +222,7 @@ Also fine, without the slash:
   <br>
 ```
 
-```react
+```jsx
 Fine in JSX:
 
   <br />
@@ -236,7 +236,7 @@ NOT FINE AT ALL in JSX:
 
 Now we finally get to creating functional components in React. A functional component is basically just a JavaScript function. The naming convention for all React components is camel case and starting with a capital letter.
 
-```react
+```jsx
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -247,7 +247,7 @@ function App() {
 
 Another rule of functional components is they have to **return** some JSX to be rendered. In `ReactDOM.render` we can create an instance of our component by writing its name and wrapping it in JXS tags.
 
-```react
+```jsx
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -290,7 +290,7 @@ Let's say we have `App.js` and `index.js` side by side and we want to export our
 
 **App.js**
 
-```react
+```jsx
 import React from 'react'
 
 function App() {
@@ -312,7 +312,7 @@ export default App
 
 **index.js**
 
-```react
+```jsx
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './App'
@@ -333,7 +333,7 @@ If you are familiar with ES6 JavaScript which you guys probably should be then e
 
 Let's go back to `App.js`, If this were an actual website we'd probably want to have something like nav bar with some links to other parts of the website and probably also a footer which contains some information, maybe a link to an FAQ page and some other related links. So let's create a starter template for these.
 
-```react
+```jsx
 import React from 'react'
 
 function App() {
@@ -367,7 +367,7 @@ It doesn't make sense to write websites like this because its gonna get unbearab
 
 **MyNavBar.js**
 
-```react
+```jsx
 import React from 'react'
 
 function MyNavBar() {
@@ -389,7 +389,7 @@ export default MyNavBar
 
 **MyMain.js**
 
-```react
+```jsx
 import React from 'react'
 
 function MyMain() {
@@ -411,7 +411,7 @@ export default MyMain
 
 **MyFooter.js**
 
-```react
+```jsx
 import React from 'react'
 
 function MyFooter() {
@@ -429,7 +429,7 @@ We'll place all of the files above into the components folder. For a real websit
 
 **Then in App.js**
 
-```react
+```jsx
 import React from 'react'
 import MyNavBar from './components/MyNavBar'
 import MyMain from './components/MyMain'
@@ -456,7 +456,7 @@ A navbar is composed of many parts, It typically has a logo, some links to other
 
 **NavLinks.js**
 
-```react
+```jsx
 import React from 'react'
 
 function NavLinks() {
@@ -473,7 +473,7 @@ export default NavLinks
 
 **MyNavBar.js**
 
-```react
+```jsx
 import React from 'react'
 import NavLinks from './NavLinks'
 
@@ -489,7 +489,7 @@ function MyNavBar() {
 export default MyNavBar
 ```
 
-![React-Tree](C:\Users\henry\AppData\Roaming\Typora\typora-user-images\image-20200822221831330.png)
+![React-Tree](https://cdn.discordapp.com/attachments/739326702085341215/748302738403754044/image-20200822221831330.png)
 
 Here we can see that the structure of our components looks like a tree, and this is no accident. `App` is the root of the component tree with three children and `MyNavBar` has a child of its own as well. Next week we'll get to see how the components can pass information between them through something called props and another thing called state.
 
@@ -508,7 +508,7 @@ Time to talk about JavaScript injections in JSX. Going from JSX to JavaScript an
 
 All of our components up the this point begin with a return statement, but as programmers we know that a lot of code can come before the return statement and earlier we saw that we could assign JSX to variables because JSX is treated as a JavaScript expression. So let's explore this a bit more by creating a new `App.js` file
 
-```react
+```jsx
 import React from 'react'
 
 function App() {
@@ -532,7 +532,7 @@ If you insert curly braces in JSX, you'll be able to write JavaScript between th
 
 In the code we are simply rendering a button and when you click on the button it's class attribute toggled to changed its color. We do this with the `onClick` attribute. As stated before, JSX attributes have to be written in camel case. Then we set `onClick` equal to our handler function, and we can achieve this by first wrapping it in curly braces for a JavaScript injection!
 
-```react
+```jsx
 import React from "react";
 
 function App() {
@@ -567,7 +567,7 @@ EXERCISE
 
 Let's get back to that small caveat, you cannot use if statements inside of JSX :(
 
-```react
+```jsx
 import React from 'react'
 
 function App() {
@@ -594,7 +594,7 @@ export default App
 
 The above code will not execute and will return errors! But fear not, there are several work arounds to this! Personally, I think it's best that you are unable to do this, because it makes the code more ugly and harder to read anyway. We'll try putting the if statement before the return  and see how well that works.
 
-```react
+```jsx
 import React from 'react'
 
 function App() {
@@ -618,11 +618,11 @@ function App() {
 export default App
 ```
 
-The above is an easy fix to the problem. Here I made a new variable called `greeting` and set it equal to some JSX and then injected `greeting` into the return statement. Alternatively I could have made `greeting` a string and injected the string between <h2> tags in the return statement. This is not the only way to use conditionals in JSX though. We'll explore two more ways with the ternary operator and `&&`. First, ternary...
+The above is an easy fix to the problem. Here I made a new variable called `greeting` and set it equal to some JSX and then injected `greeting` into the return statement. Alternatively I could have made `greeting` a string and injected the string between `<h2>` tags in the return statement. This is not the only way to use conditionals in JSX though. We'll explore two more ways with the ternary operator and `&&`. First, ternary...
 
 ### Ternary Operator
 
-```react
+```jsx
 import React from 'react'
 
 function App() {
@@ -644,7 +644,7 @@ Many of you have heard of the ternary operator but maybe you are the the type of
 
 Next we have the `&&` operator. This operator is used when you want something to render sometimes but not all the time. For example, let's say you want to give the user of your app a notification that tells them how many unread messages they have but you don't want to show that notification when they have no unread message...
 
-```react
+```jsx
 import React from 'react'
 
 function Mailbox() {
@@ -668,7 +668,7 @@ If `unreadMessages.length > 0` then the <h2> will be rendered, otherwise it will
 
 A very useful array method for JSX is`.map()`and it comes up often in React. Creating a list of JSX elements is straight forward with `.map()`. Here I'll just make a list of some foods I like and quickly map them to JSX with ease without having to repeatedly type <li> over and over.
 
-```react
+```jsx
 import React from 'react'
 
 function App() {
@@ -702,7 +702,7 @@ When making JSX lists sometimes we'll want to include the `key` attribute. The v
 
 Keys are very simple to implement and can be done alongside `.map()`
 
-```react
+```jsx
 import React from 'react'
 
 function App() {

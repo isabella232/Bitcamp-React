@@ -6,7 +6,7 @@ Each of the following questions contain compiler and runtime errors. Provide a s
 
 1. **Explanation:** 
 
-```react
+```jsx
 
 import ReactDOM from 'react-dom'
 
@@ -20,7 +20,7 @@ ReactDOM.render(
 
 2. **Explanation:** 
 
-```react
+```jsx
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -38,7 +38,7 @@ ReactDOM.render(
 
 3. **Explanation:** 
 
-```react
+```jsx
 import React from 'react'
 
 function App() {
@@ -53,7 +53,7 @@ export default App
 
 4. **Explanation:** 
 
-```react
+```jsx
 import React from 'react'
 
 function App() {
@@ -73,7 +73,7 @@ export default App
 
 5. **Explanation:** 
 
-```react
+```jsx
 import React from 'react'
 
 function App() {
@@ -102,7 +102,7 @@ export default App
 
 *Hint: one character off.*
 
-```react
+```jsx
 import React from 'react'
 
 function App() {

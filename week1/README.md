@@ -9,4 +9,4 @@ This week we will be familiarizing ourselves with JSX. We will learn how JSX get
 
 **Homework:**
 
-The homework will test students on their syntax of JSX by asking them to correct ten pieces of broken code.
+The homework will test students on their syntax of JSX by asking them to correct pieces of broken code.

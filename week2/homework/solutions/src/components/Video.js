@@ -5,7 +5,7 @@ function Video(props) {
 
   return (
     <div>
-      <video controls autoStart autoPlay src={src} />
+      <video controls autostart="true" autoPlay src={src} />
     </div>
   )
 }

@@ -242,6 +242,48 @@ const contactList = [
     imageUrl: "http://placeimg.com/200/100/animals",
     phone: "(212) 555-4567",
     email: "xxganonxx@hotmail.com"
+  },
+  {
+    id: 4,
+    name: "Milo",
+    imageUrl: "http://placeimg.com/200/300/animals",
+    phone: "(212) 555-1237",
+    email: "milo@hotmail.com"
+  },
+  {
+    id: 5,
+    name: "Poppy",
+    imageUrl: "http://placeimg.com/200/200/animals",
+    phone: "(212) 555-7146",
+    email: "poppy@gmail.com"
+  },
+  {
+    id: 6,
+    name: "Luna",
+    imageUrl: "http://placeimg.com/100/100/animals",
+    phone: "(212) 555-4567",
+    email: "luna@hotmail.com"
+  },
+  {
+    id: 7,
+    name: "Rosie",
+    imageUrl: "http://placeimg.com/200/150/animals",
+    phone: "(212) 555-4567",
+    email: "rosie@yahoo.com"
+  },
+  {
+    id: 8,
+    name: "Molly",
+    imageUrl: "http://placeimg.com/150/250/animals",
+    phone: "(212) 555-4567",
+    email: "molly@onlyfans.com"
+  },
+  {
+    id: 9,
+    name: "Coco",
+    imageUrl: "http://placeimg.com/300/300/animals",
+    phone: "(212) 555-4567",
+    email: "cocopuffs@gmail.com"
   }
 ]
 

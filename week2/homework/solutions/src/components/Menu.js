@@ -10,8 +10,14 @@ function Meun(props) {
 
   const videoInputsJSX = videoValues.map((value, i) => {
     return (
-      <div className="video-inputs">
-        <input key={i} type="radio" name="src" value={value} />
+      <div>
+        <input
+          className="video-input"
+          key={i}
+          type="radio"
+          name="src"
+          value={value}
+        />
         {value}
       </div>
     )

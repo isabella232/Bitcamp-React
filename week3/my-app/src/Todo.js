@@ -13,12 +13,12 @@ export default function Todo({todo, toggleTodo}) {
     
     return (
         <div class = "todo-item">
-            <label>
-                <input type = "checkbox" checked = {todo.complete}            
-                onChange = {handleTodoClick}/> 
-                <p style = {todo.complete ? completedStyle: null}>{todo.name}</p>
+            
+            <input type = "checkbox" checked = {todo.complete}            
+            onChange = {handleTodoClick}/> 
+            <p style = {todo.complete ? completedStyle: null}>{todo.name}</p>
 
-            </label>
+           
         </div>
     )
 }

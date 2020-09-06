@@ -48,9 +48,26 @@ input[type=checkbox]:focus {
 
 .button-controls {
     display: flex;
-    align-items: center;
+    width: 70%;
     justify-content: space-around;
+    align-items: center;
     border-bottom: 1px solid #cecece;
+    padding: 30px;
+}
+
+button {
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    border-radius: 2px;
+    background-color: white;
+    
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #cdcdcd;
+    color: black;
 }
 input[type=text] {
 

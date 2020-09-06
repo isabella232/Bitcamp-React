@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Meun(props) {
+function Menu(props) {
   const { chooseVideo, videoValues } = props
 
   const handleClick = (e) => {
@@ -10,14 +10,8 @@ function Meun(props) {
 
   const videoInputsJSX = videoValues.map((value, i) => {
     return (
-      <div>
-        <input
-          className="video-input"
-          key={i}
-          type="radio"
-          name="src"
-          value={value}
-        />
+      <div className="video-inputs">
+        <input key={i} type="radio" name="src" value={value} />
         {value}
       </div>
     )
@@ -26,4 +20,4 @@ function Meun(props) {
   return <form onClick={handleClick}>{videoInputsJSX}</form>
 }
 
-export default Meun
+export default Menu

@@ -214,9 +214,11 @@ const { imageUrl, name, phone, email } = props.contact
 
 **Using .map()**
 
-.map() is very useful in React. Learning React makes you a better JS programmer or something
+No let's say that we have some data that we are fetching to make these contact cards and there's a lot of contacts that we have to display. It's going to be a pain in the ass to create all those contact card instances, and what if the number of contact cards changes in the future? We're going to have to think of a way for this to scale and work properly no matter how many contacts we have.
 
-Probably gonna fetch from the backend or some other API. Let's imitate that with a contact list file. We'll be using the id in a bit.
+Thankfully, JavaScript gives us an easy solution, the `.map` array method and it comes up often in React. Using it is really easy and it is a great tool to make code scalable. Let's see how we can use it here.
+
+First I'll add the `contactList.js` file which we'll use to imitate a fetch to your backend or some other API.
 
 **contactList.js**
 
@@ -310,7 +312,9 @@ function App() {
 export default App
 ```
 
-But wait there's an issue, each child in a list needs a unique "key" prop. Typically there will be a unique id associated with each piece of info in a database so we can easily use that as our id (it's also good to keep things consistent).
+But wait there's an issue, each child in a list needs a unique "key" attribute. This is because React uses the keys to figure out which one needs to be rerendered when one changes. If your don't have the keys then React will end up rerendering all of the JSX that was created from that particular instance of `.map`. So every single contact card would be rerendered if a single one gets updated. Needlessly rerendering a lot of JSX can be a big performance hit so let's avoid that.
+
+Now, typically there will be a unique id associated with each piece of info in a database so we can easily use that as our id (it's also good to keep things consistent).
 
 ```jsx
 import React from "react"

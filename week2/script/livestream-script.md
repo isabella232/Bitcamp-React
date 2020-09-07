@@ -367,6 +367,8 @@ More explicitly we can write this as,
 const [someVar, aFunctionToSetSomeVar] = useState(defaultValueForSomeVar)
 ```
 
+One key thing to understand about `useState` is that when we call the set function and the value of our state variable changed then this will trigger a rerender. But React is clever and will only rerender the JSX that was modified as a result of the state change.
+
 Let's now write a concrete example to build our intuition, please follow along,
 
 ```jsx

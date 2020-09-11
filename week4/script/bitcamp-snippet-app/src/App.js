@@ -17,6 +17,7 @@ function App() {
   const textareaRef = useRef()
 
   //? Code this towards the end
+  //TODO add commented out functions
   // Listen for specific key inputs
   useEffect(() => {
     const handleKeydown = (e) => {

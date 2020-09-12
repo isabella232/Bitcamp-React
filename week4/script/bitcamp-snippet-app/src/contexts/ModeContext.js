@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import VSCode from '../components/VSCode'
 import Atom from '../components/Atom'
+import Sublime from '../components/Sublime'
 
 const ModeContext = React.createContext()
 
@@ -15,6 +16,10 @@ function ModeProvider(props) {
     Atom: {
       style: { backgroundColor: '#40a977' },
       component: <Atom />,
+    },
+    Sublime: {
+      style: { backgroundColor: '#F59821' },
+      component: <Sublime />,
     },
   }
 

@@ -28,10 +28,10 @@ body {
   width: 100vw;
   min-height: 100vh;
   padding: 8px;
-  transition: background-color 140ms;
+  transition: background-color 200ms;
 }
 
-.app--vscode {
+/* .app--VSCode {
   background-color: #006eb4;
 }
 
@@ -39,9 +39,9 @@ body {
   background-color: #4b4b4b;
 }
 
-.app--atom {
+.app--Atom {
   background-color: #40a977;
-}
+} */
 
 @media screen and (min-width: 960px) {
   .app {
@@ -135,15 +135,11 @@ body {
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.25);
 }
 
-.app--vscode .app__input:focus {
+.app--VSCode .app__input:focus {
   box-shadow: inset 0 0 0 1px #006eb4;
 }
 
-.app--sublimetext .app__input:focus {
-  box-shadow: inset 0 0 0 1px #4b4b4b;
-}
-
-.app--atom .app__input:focus {
+.app--Atom .app__input:focus {
   box-shadow: inset 0 0 0 1px #40a977;
 }
 
@@ -170,15 +166,11 @@ body {
   resize: none;
 }
 
-.app--vscode .app__textarea:focus {
+.app--VSCode .app__textarea:focus {
   box-shadow: inset 0 0 0 1px #006eb4;
 }
 
-.app--sublimetext .app__textarea:focus {
-  box-shadow: inset 0 0 0 1px #4b4b4b;
-}
-
-.app--atom .app__textarea:focus {
+.app--Atom .app__textarea:focus {
   box-shadow: inset 0 0 0 1px #40a977;
 }
 
@@ -207,7 +199,7 @@ body {
   user-select: all;
 }
 
-.app--vscode .app__infolink {
+.app--VSCode .app__infolink {
   color: #006eb4;
 }
 
@@ -215,13 +207,13 @@ body {
   color: #4b4b4b;
 }
 
-.app--atom .app__infolink {
+.app--Atom .app__infolink {
   color: #40a977;
 }
 
 /* btn */
 
-.app__button {
+.app__topbtn {
   flex: 1;
   margin: 2px;
   padding: 0 16px;
@@ -236,7 +228,7 @@ body {
   cursor: pointer;
 }
 
-.app__button--vscode.app__button--active {
+/* .app__button--VSCode.app__button--active {
   background-color: #006eb4;
 }
 
@@ -244,9 +236,9 @@ body {
   background-color: #4b4b4b;
 }
 
-.app__button--atom.app__button--active {
+.app__button--Atom.app__button--active {
   background-color: #40a977;
-}
+} */
 
 .app__pre {
   flex: 1;
@@ -266,7 +258,7 @@ body {
   user-select: all;
 }
 
-.app__btn {
+.app__bottombtn {
   padding: 0 16px;
   border: 0;
   border-radius: 2px;
@@ -277,7 +269,7 @@ body {
   margin-left: 4px;
 }
 
-.app--vscode .app__btn {
+/* .app--VSCode .app__btn {
   background-color: #006eb4;
 }
 
@@ -285,11 +277,11 @@ body {
   background-color: #4b4b4b;
 }
 
-.app--atom .app__btn {
+.app--Atom .app__btn {
   background-color: #40a977;
-}
+} */
 
-.app__buttons {
+.app__btncopy {
   position: absolute;
   right: 8px;
   bottom: 8px;

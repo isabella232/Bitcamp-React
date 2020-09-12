@@ -12,14 +12,18 @@ function ModeProvider(props) {
     VSCode: {
       style: { backgroundColor: '#006eb4' },
       component: <VSCode />,
+      docs: 'https://code.visualstudio.com/docs/editor/userdefinedsnippets',
     },
     Atom: {
       style: { backgroundColor: '#40a977' },
       component: <Atom />,
+      docs: 'http://flight-manual.atom.io/using-atom/sections/snippets/',
     },
     Sublime: {
       style: { backgroundColor: '#F59821' },
       component: <Sublime />,
+      docs:
+        'http://docs.sublimetext.info/en/latest/extensibility/snippets.html',
     },
   }
 

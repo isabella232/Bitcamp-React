@@ -8,7 +8,6 @@ function Atom() {
   const renderSnippet = (inputs) => {
     const { snippet, description, tabTrigger } = inputs
 
-    //? explain why we are using html from common tags
     // prettier-ignore
     return html`
       '${description}':

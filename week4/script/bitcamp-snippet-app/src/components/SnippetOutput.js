@@ -3,7 +3,6 @@ import Clipboard from 'clipboard'
 import { ModeContext } from '../contexts/ModeContext'
 
 function SnippetOutput() {
-  //! Does not use Inputs
   const { mode, updateMode, getModeProperty, getModeNames } = useContext(
     ModeContext
   )

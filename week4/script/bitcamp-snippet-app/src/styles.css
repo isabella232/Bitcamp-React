@@ -199,7 +199,7 @@ body {
   user-select: all;
 }
 
-.app--VSCode .app__infolink {
+/* .app--VSCode .app__infolink {
   color: #006eb4;
 }
 
@@ -209,7 +209,7 @@ body {
 
 .app--Atom .app__infolink {
   color: #40a977;
-}
+} */
 
 /* btn */
 

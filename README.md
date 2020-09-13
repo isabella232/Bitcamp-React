@@ -10,11 +10,11 @@ Hooks were created to address the above concerns and several others. Hooks make 
 
 **What will the student work on?**
 
-The students will create a Todo list and a Carousel. 
+The students will create a Todo list, an Expense Calculator, and a Snippet Generator. 
 
-Many other React tutorials begin with a Todo list as it is a simple assignment that is able to show off many of features React offers. The first three weeks will prepare the students in finishing a simple Todo list.
+Many other React tutorials begin with a Todo list as it is a simple assignment that is able to show off many of features React offers. The Todo list will be constructing in class and will retirerate all of the concepts of JSX and React Hooks that the students have seen up to that point. Then they will complete an Expense Calculator to reinforce these principles.
 
-The carousel does a phenomenal job at showcasing the power and features of React Hooks. Many websites include a carousel on their homepage which makes this project quite practical. Ryan Florence, a React Developer, created a carousel for React Conf 2018 (where hooks were first introduced to the public) and it's his code we'll be working off of. [https://github.com/ryanflorence/react-conf-2018/tree/master/carousel](https://github.com/ryanflorence/react-conf-2018/tree/master/carousel)
+The Snippet Generator will be constructed in class and will closely resemble the one found [here](https://snippet-generator.app/). The code for this project has been restructured to better suit the material covered in the Bitcamp and to address some of the flaws of the original design. We believe this to be a suitable capstone as it is an app that many developers currently use around the world making it quite practical and is a tool which the students may find useful themselves. If you wish to know more about code snippets you may explore the [VS Code Documentation](https://code.visualstudio.com/docs/editor/userdefinedsnippets).
 
 ### **Week 1**
 
@@ -61,12 +61,12 @@ Homework
 
 ### **Week 4**
 
-Create the carousel project.
+Create a code snippet generator.
 
-**Objective: We want to provide the students with knowledge they may need to apply for an employer or client in the future and many websites include a carousel on their homepage. The carousel uses all the Hooks we have gone over in the previous weeks and also requires a user created Hook making it a practical capstone.**
+**Objective: We want to provide students deeper knowledge on how to construct a React app that is larger in scope than what we have done before. We believe this is necessary so students understand basic concepts on how to strucure larger sized React apps.**
 
-- Build a carousel but leave out certain parts of it for the students to complete
+- Build a snippet generator but leave out certain parts of it for the students to complete on their own
 
 Homework
 
-- Complete the carousel
+- Complete the snippet generator

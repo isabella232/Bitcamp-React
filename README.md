@@ -18,7 +18,7 @@ The Snippet Generator will be constructed in class and will closely resemble the
 
 ### **Week 1**
 
-Establish an understanding of a functional component and its parts.
+Establish an understanding of JSX and a functional component and its parts.
 
 **Objective: These are all required in understanding how to use React and the way React integrates JavaScript and HTML into JSX**
 
@@ -29,35 +29,34 @@ Establish an understanding of a functional component and its parts.
 **Homework**
 
 - Students will be given a few broken components to debug
-- Asked to create a component composed of a header, main, and footer component
 
 ### **Week 2**
 
 Introduce students to props and the useState Hook.
 
-**Objective: These two aspects of React are best learned together and are the most vital in creating a React app.** 
+**Objective: These two aspects of React are best learned together and are the most vital in creating a React app. We will also go over basic programming concepts in React such as a child component updating its parent's state or its sibling's props.** 
 
 - Learn what props are and how they are used to pass information between components
 - Briefly talk about Hooks before going into useState and why state makes React so dynamic
+- Go over passing information to a parent or sibling component
 
 **Homework**
 
-- Have a component update its parent's state
-- Have a component update its siblings props
+- Have students complete the Video Player assignment
 
 ### **Week 3**
 
-Provide a more in-depth explanation of Hooks. Introduce and elaborate on useEffect and useRef.
+Provide a more in-depth explanation of Hooks. Introduce and elaborate on useEffect, useContext, and useRef.
 
-**Objective: Both useEffect and useRef are Hooks that are required in the Todo list and carousel and are commonly used Hooks. Here it is important to show useEffect's verbose class equivalent to understand why React Developers are moving toward Hooks. Students should also understand that you can create your own Hooks and use others the community has created.**
+**Objective: All of useEffect, useContext, and useRef are Hooks that are required in the Todo list and Snippet Generator and are commonly used Hooks. Here it is important to show useEffect's verbose class equivalent to understand why React Developers are moving toward Hooks. Students should also understand that you can create your own Hooks and use others the community has created.**
 
-- Explain useEffect and its class equivalent along with useRef
-- Show how to create your own Hooks
-- Start the Todo list but leave parts of it for the students to complete
+- Explain useEffect and its class equivalents
+- Explain useContext and useRef
+- Create a Todo list
 
 Homework
 
-- Complete the Todo list
+- Complete an Expense calculator with given starter code
 
 ### **Week 4**
 

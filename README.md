@@ -8,7 +8,7 @@ You only have one state object per component class in React which means there wi
 
 Hooks were created to address the above concerns and several others. Hooks make React much cleaner, easier to read, and easier to write. The developers of React see Hooks as its future. They do not currently have plans to remove class support but within the Hooks FAQ they state "In the longer term, we expect Hooks to be the primary way people write React components." Hence, I believe Hooks are the proper way to teach React in 2020.
 
-**What will the student work on?**
+**What will the students work on?**
 
 The students will create a Todo list, an Expense Calculator, and a Snippet Generator. 
 

@@ -192,8 +192,6 @@ Now I want you guys to try one of these yourselves.
 2. In Queries.js create an `<h3>` for a question and a `<p>` for an answer
 3. Pass in a `question` and `answer` into each Queries instance
 
-Do one of these yourselves and the exercise is gonna be...
-
 **Pass Object to Props**
 
 You're probably gonna be passing some JSON in from an API call. This is also a lot of info to pass together so lets turn it into an object.

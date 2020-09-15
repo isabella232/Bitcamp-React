@@ -1,7 +1,5 @@
 # JSX Quiz
 
-*Please quickly answer these five multiple choice questions on JSX.*
-
 1. **Can a web browser read JSX directly?**
 
    a. No, a web browser must be compiled before it can read JSX.
@@ -32,10 +30,10 @@
 
 3. **What's wrong with this code?**
 
-   ```react
+   ```jsx
    let skateboard = (
    	<img src="bitcamp.jpg" />
-       <h1>Can't wait to start using React!</h1>
+      <h1>Can't wait to start using React!</h1>
    );
    ```
 
@@ -51,31 +49,11 @@
 
 
 
-4. **What is the correct way to attach the function `yo` to a click event?**
-
-   ```react
-   const yo = () => {
-       alert('Yo')
-   }
-   ```
-
-   a. `<button onClick={yo}></button>`
-
-   b. `<button>{onClick=yo}</button>`
-
-   c. `<button onClick=yo></button>`
-
-   d. `<button {onClick}={yo}></button>`
-
-   **Answer:** A
-
-
-
-5. **Which block of code will render `100` to the screen?**
+4. **Which block of code will render `100` to the screen?**
 
    a.
 
-   ```react
+   ```jsx
    ReactDOM.render(
    	<h1>10 * 10</h1>,
    	document.getElementById('root')
@@ -84,7 +62,7 @@
 
    b. 
 
-   ```react
+   ```jsx
    ReactDOM.render(
    	<h1>{10} * {10}</h1>,
    	document.getElementById('root')
@@ -93,7 +71,7 @@
 
    c. 
 
-   ```react
+   ```jsx
    ReactDOM.render(
    	<h1>{10 * 10}</h1>,
    	document.getElementById('root')
@@ -102,7 +80,7 @@
 
    d.
 
-   ```react
+   ```jsx
    ReactDOM.render(
    	{<h1>10 * 10</h1>},
    	document.getElementById('root')
@@ -110,3 +88,27 @@
    ```
 
    **Answer:** C
+
+
+
+5. **Which block of code will return 'Success'?**
+
+   a. 
+
+   ```jsx
+   {2 <= 1 ? <h1>Failure</h1> : <h1>Success</h1>},
+   ```
+   
+   b.
+
+   ```jsx
+   {42 < 5 && <h1>Success</h1>},
+   ```
+   
+   c.
+
+   ```jsx
+   {true ? <h1>Failure</h1> : <h1>Success</h1>},
+   ```
+
+   **Answer:** A

@@ -282,6 +282,51 @@ Now create your own functional component. You'll want to do the following:
 
 (GIVE THEM A COUPLE MINUTES TO TRY THE EXERCISE BEFORE GOING OVER IT YOURSELF)
 
+**Quiz Questions 1 and 2**
+1. **Can a web browser read JSX directly?**
+
+   a. No, a web browser must be compiled before it can read JSX.
+
+   b. Yes.
+
+   c. Only Internet Explorer
+
+   d. No, JSX must be compiled before it can be read by a web browser
+
+
+
+2. **What should you pass to `ReactDOM.render()` for its second argument?**
+
+   a. `ReactDOM.render()` itself.
+
+   b. A selector that matches an HTML element.
+
+   c. A JSX expression that you want to compile.
+
+   d. A JSX expression that you want to render.
+
+
+
+3. **What's wrong with this code?**
+
+   ```jsx
+   let skateboard = (
+   	<img src="bitcamp.jpg" />
+      <h1>Can't wait to start using React!</h1>
+   );
+   ```
+
+   a. JSX expressions need to be compiled.
+
+   b. JSX expressions need an outermost element.
+
+   c. JSX expressions should be followed by full colons, not semicolons. 
+
+   d. Improper use of 'let'.
+
+
+**Answers:** D, B, B
+
 ### Importing / Exporting Components
 
 We wouldn't want to have all of our components in one file. For even a small project that is very cumbersome so as you might have already guessed, we can export and import our components to other locations.
@@ -526,36 +571,9 @@ function App() {
 export default App
 ```
 
-If you insert curly braces in JSX, you'll be able to write JavaScript between then. Obviously, If the braces were removed here then it will literally be interpreted as `Let's all give a warm welcome to firstName + " " + lastName!`. This gives JSX a lot of power, but because of the way JSX is compiled there is a small caveat. We'll get into that right after we tackle event handling.
+If you insert curly braces in JSX, you'll be able to write JavaScript between then. Obviously, If the braces were removed here then it will literally be interpreted as `Let's all give a warm welcome to firstName + " " + lastName!`. This gives JSX a lot of power, but because of the way JSX is compiled there is a small caveat.
 
-### Event Handling
-
-In the code we are simply rendering a button and when you click on the button it's class attribute toggled to changed its color. We do this with the `onClick` attribute. As stated before, JSX attributes have to be written in camel case. Then we set `onClick` equal to our handler function, and we can achieve this by first wrapping it in curly braces for a JavaScript injection!
-
-```jsx
-import React from "react";
-
-function App() {
-  const toggleColor = (e) => {
-    const currColor = e.target.getAttribute("class")
-    const newColor = currColor === "green" ? "blue" : "green"
-    e.target.setAttribute("class", newColor)
-  }
-
-  return (
-    <div>
-      <h1>Bitcamp React</h1>
-      <button className="blue" onClick={toggleColor}>
-        Toggle Color
-      </button>
-    </div>
-  )
-}
-
-export default App
-```
-
-EXERCISE
+**EXERCISE**
 
 1. Render a button with a colored className (red/blue/green/black)
 2. Give it an `onClick` attribute set to an event function
@@ -565,7 +583,7 @@ EXERCISE
 
 ##### If does not work
 
-Let's get back to that small caveat, you cannot use if statements inside of JSX :(
+You cannot use if statements inside of JSX :(
 
 ```jsx
 import React from 'react'
@@ -664,4 +682,74 @@ export default Mailbox
 
 If `unreadMessages.length > 0` then the `<h2>` will be rendered, otherwise it will not be rendered.
 
+**EXERCISE**
+1. create a component with a boolean variable called `isLoggedIn` and provide a value
+2. Use a conditional to state whether the user is currently logged in
+3. If the user is logged in render an `<h1>` that says 'Welcome!'
+4. (You must use two different types of conditionals (if / ternary / &&) )
+
+**Quiz Questions 4 and 5**
+4. **Which block of code will render `100` to the screen?**
+
+   a.
+
+   ```jsx
+   ReactDOM.render(
+   	<h1>10 * 10</h1>,
+   	document.getElementById('root')
+   )
+   ```
+
+   b. 
+
+   ```jsx
+   ReactDOM.render(
+   	<h1>{10} * {10}</h1>,
+   	document.getElementById('root')
+   )
+   ```
+
+   c. 
+
+   ```jsx
+   ReactDOM.render(
+   	<h1>{10 * 10}</h1>,
+   	document.getElementById('root')
+   )
+   ```
+
+   d.
+
+   ```jsx
+   ReactDOM.render(
+   	{<h1>10 * 10</h1>},
+   	document.getElementById('root')
+   )
+   ```
+
+
+
+5. **Which block of code will return 'Success'?**
+
+   a. 
+
+   ```jsx
+   {2 <= 1 ? <h1>Failure</h1> : <h1>Success</h1>},
+   ```
+   
+   b.
+
+   ```jsx
+   {42 < 5 && <h1>Success</h1>},
+   ```
+   
+   c.
+
+   ```jsx
+   {true ? <h1>Failure</h1> : <h1>Success</h1>},
+   ```
+
+**Answers:** C,  A
+
 So far all I've shown you is JSX which can be thought of as A D V A N C E D HTML and you'll be using it a lot in React but we have yet to cover the most important areas of React, that being props and state. These are what makes React extremely useful and fun to use, but they can be a little confusing to newcomers so they deserve their own week.
+

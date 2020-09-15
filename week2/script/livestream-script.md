@@ -218,7 +218,7 @@ No let's say that we have some data that we are fetching to make these contact c
 
 Thankfully, JavaScript gives us an easy solution, the `.map` array method and it comes up often in React. Using it is really easy and it is a great tool to make code scalable. Let's see how we can use it here.
 
-First I'll add the `contactList.js` file which we'll use to imitate a fetch to your backend or some other API.
+First I'll add the `contactList.js` file which we'll use to imitate a fetch to your backend or some other API. This contact list only has nine entries but already we can see that writing all of this information out in `App.js` is going to be cumbersome.
 
 **contactList.js**
 

@@ -341,6 +341,41 @@ I have provided you with a a list of questions and answers in a file
 1. expand upon the last exercise and map each question and answer combo to a Query instance
 2. *Optional*: pass a single object in instead of separate question and answer attributes
 
+### Event Handling
+
+Before we move one to the next segment we need to handle one more aspect of JSX which is event handling.
+
+```jsx
+import React from "react";
+
+function App() {
+  const toggleColor = (e) => {
+    const currColor = e.target.getAttribute("class")
+    const newColor = currColor === "green" ? "blue" : "green"
+    e.target.setAttribute("class", newColor)
+  }
+
+  return (
+    <div>
+      <h1>Bitcamp React</h1>
+      <button className="blue" onClick={toggleColor}>
+        Toggle Color
+      </button>
+    </div>
+  )
+}
+
+export default App
+```
+
+In the code we are simply rendering a button and when you click on the button it's class attribute toggled to changed its color. We do this with the `onClick` attribute. As stated before, JSX attributes have to be written in camel case. Then we set `onClick` equal to our handler function, and we can achieve this by first wrapping it in curly braces for a JavaScript injection!
+
+**EXERCISE**
+
+1. Render a button with a colored className (red/blue/green/black)
+2. Give it an `onClick` attribute set to an event function
+3. create an event function which changes the target's colored `className`
+
 ### State
 
 One rule of props is that you are not supposed to change then within a component otherwise there may be some unintended consequences because React isn't meant to work that way. You wouldn't be able to write, for example,

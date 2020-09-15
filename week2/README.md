@@ -11,4 +11,5 @@ Through these new concepts a component will be able to update information within
 - Go over event handling and using `.map()'
 
 **Homework:**
+
 Create a video player to server as practice for updating sibling props

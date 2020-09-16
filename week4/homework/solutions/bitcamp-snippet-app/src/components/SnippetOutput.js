@@ -1,11 +1,10 @@
 import React, { useContext, useEffect } from 'react'
 import Clipboard from 'clipboard'
-import { MainContext } from '../contexts/MainContext'
+import { ModeContext } from '../contexts/ModeContext'
 
 function SnippetOutput() {
-  //! Does not use Inputs
   const { mode, updateMode, getModeProperty, getModeNames } = useContext(
-    MainContext
+    ModeContext
   )
 
   useEffect(() => {

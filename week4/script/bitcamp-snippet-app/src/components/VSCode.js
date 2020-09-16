@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
-import { InputContext } from '../contexts/InputContext'
+import { MainContext } from '../contexts/MainContext'
 import { html } from 'common-tags'
 
 function VSCode() {
-  const { inputs } = useContext(InputContext)
+  const { inputs } = useContext(MainContext)
 
   const renderSnippet = (inputs) => {
-    const { snippet, description, tabTrigger } = inputs
+    const { snippet, description, tabTriggers } = inputs
 
     //escape " with \"
     //split lines by line-break
@@ -24,7 +24,7 @@ function VSCode() {
     // prettier-ignore
     return html`
       "${description}": {
-        "prefix": "${tabTrigger}",
+        "prefix": "${tabTriggers}",
         "body": [
           ${newSnippet.join('\n')}
         ],

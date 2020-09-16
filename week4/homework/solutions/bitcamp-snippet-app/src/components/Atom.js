@@ -1,18 +1,17 @@
 import React, { useContext } from 'react'
-import { MainContext } from '../contexts/MainContext'
+import { InputContext } from '../contexts/InputContext'
 import { html } from 'common-tags'
 
 function Atom() {
-  const { inputs } = useContext(MainContext)
+  const { inputs } = useContext(InputContext)
 
   const renderSnippet = (inputs) => {
-    const { snippet, description, tabTriggers } = inputs
+    const { snippet, description, tabTrigger } = inputs
 
-    //? explain why we are using html from common tags
     // prettier-ignore
     return html`
       '${description}':
-        'prefix': '${tabTriggers}'
+        'prefix': '${tabTrigger}'
         'body': """
           ${snippet}
         """

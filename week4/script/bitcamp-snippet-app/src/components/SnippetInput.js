@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
-import { InputContext } from '../contexts/InputContext'
-import Info from './Info'
+import { MainContext } from '../contexts/MainContext'
 
 function SnippetInput() {
-  const { inputs, textareaRef, onInput } = useContext(InputContext)
+  //! DOES NOT USE MODE
+  const { inputs, textareaRef, onInput } = useContext(MainContext)
 
   return (
     <div className="app__half">
@@ -48,7 +48,6 @@ function SnippetInput() {
           spellCheck="false"
           wrap="off"
         />
-        <Info />
       </div>
     </div>
   )

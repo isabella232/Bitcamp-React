@@ -1,1 +1,1 @@
-# Bitcamp React Week 4
+# Week 4: Snippet Generator

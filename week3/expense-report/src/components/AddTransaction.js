@@ -20,9 +20,7 @@ export const AddTransaction = () => {
     addTransaction(newTransaction);
   }
 
-  function handleAddTransaction() {
-      
-  }
+
   return (
     <>
       <h3>Add new transaction</h3>
@@ -30,7 +28,7 @@ export const AddTransaction = () => {
         <div className="form-control">
           <label htmlFor="text">Text</label>
 
-          <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Enter text..." />
+          <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Enter textg..." />
         </div>
         <div className="form-control">
           <label htmlFor="amount"
@@ -39,7 +37,7 @@ export const AddTransaction = () => {
           >
           <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount..." />
         </div>
-        <button className="btn" onClick = {handleAddTransaction}>Add transaction</button>
+        <button className="btn">Add transaction</button>
       </form>
     </>
   )

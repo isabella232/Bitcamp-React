@@ -10,9 +10,11 @@ Hooks were created to address the above concerns and several others. They make R
 
 **What will the students work on?**
 
-The students will create a To-Do List, an Expense Calculator, and a Snippet Generator. 
+The students will create a Video Player, a To-Do List app, an Expense Calculator, and a Snippet Generator. 
 
-Many React tutorials begin with a To-Do List, as it is simple and shows off many of React's features. The To-Do List will be constructed in class and will retirerate all of the concepts of JSX and React Hooks that the students have seen up to that point. Then they will complete an Expense Calculator to reinforce these principles.
+The Video Player will be an assignment where students, given starter code, will create a video player that can swap between four videos. It will be a good opportunity for students to understand how a child can pass information to its siblings.
+
+The To-Do List app is a common beginner assignment, as it is simple and shows off many of React's features. It will be constructed in class and will reiterate all of the concepts of JSX and React Hooks that the students have seen up to that point. Then they will complete an Expense Calculator to reinforce these principles.
 
 The Snippet Generator will be constructed in class and will closely resemble the one found [here](https://snippet-generator.app/). The code for this project has been restructured to better suit the material covered in the Bitcamp and address some of the flaws of the original design. We believe this is a suitable capstone as it is an app that many developers currently use around the world making it quite practical, and it is a tool which the students may find useful themselves. If you wish to know more about code snippets you may explore the [VS Code Documentation](https://code.visualstudio.com/docs/editor/userdefinedsnippets).
 

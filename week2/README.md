@@ -14,4 +14,4 @@ Through these new concepts a component will be able to update information within
 
 **Homework:**
 
-Create a video player to  server as practice for updating sibling props
+Create a video player to serve as practice for updating sibling props

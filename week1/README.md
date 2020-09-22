@@ -1,6 +1,6 @@
 # Week 1: JSX
 
-This week we will be familiarizing ourselves with JSX. We will learn how JSX gets rendered and how React interacts with JSX. The meat of this week will cover how to write JSX.
+This week, we will be familiarizing ourselves with JSX, primarily how to write JSX. We will also learn how JSX gets rendered and how React interacts with JSX. 
 
 **Learning Objectives:**
 
@@ -9,4 +9,4 @@ This week we will be familiarizing ourselves with JSX. We will learn how JSX get
 
 **Homework:**
 
-The homework will test students on their syntax of JSX by asking them to correct pieces of broken code.
+The homework will test students on their knowledge of JSX syntax by asking them to correct pieces of broken code.

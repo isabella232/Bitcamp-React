@@ -62,7 +62,7 @@ Create images for snippet generator (comp tree + colored boxes)
 
 add one more hw on creating a github io app
 
-Create HW assignments for week 4
+Create individual HW assignments for week 4
 
 Split up HW 4 code
 

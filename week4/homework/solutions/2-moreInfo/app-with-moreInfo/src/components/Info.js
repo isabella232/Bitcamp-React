@@ -1,16 +1,16 @@
 import React, { useContext } from 'react'
-import { ModeContext } from '../contexts/ModeContext'
+import { MainContext } from '../contexts/MainContext'
 
 function Info() {
-  const { mode, getModeProperty } = useContext(ModeContext)
+  const { mode, getModeProperty } = useContext(MainContext)
 
   const platformKey = navigator.platform === 'MacIntel' ? '⌘' : 'ctrl'
-  const color = { color: getModeProperty(mode, 'style').backgroundColor }
+  const color = getModeProperty(mode, 'style').backgroundColor
 
   return (
     <p className="app__info">
       Press ({platformKey} + i) to declare a placeholder |{' '}
-      <a href={getModeProperty(mode, 'docs')} style={color}>
+      <a href={getModeProperty(mode, 'docs')} style={{ color: color }}>
         More info
       </a>
     </p>

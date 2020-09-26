@@ -5,6 +5,7 @@ import SnippetOutput from './components/SnippetOutput'
 import Header from './components/Header'
 import VSCode from './components/VSCode'
 import Atom from './components/Atom'
+import Sublime from './components/Sublime'
 
 function App() {
   /***************************** Code for Input ******************************/
@@ -17,7 +18,6 @@ function App() {
 
   const textareaRef = useRef()
 
-  //? Code this towards the end
   // Listen for specific key inputs
   useEffect(() => {
     const handleKeydown = (e) => {
@@ -83,16 +83,24 @@ function App() {
 
   /****************************** Code for Mode ******************************/
 
-  const [mode, setMode] = useState('VSCode')
+  const [mode, setMode] = useState('VS Code')
 
   const allModeProperties = {
-    VSCode: {
-      style: { backgroundColor: '#006eb4' }, //is this obsolete?
+    "VS Code": {
+      style: { backgroundColor: '#006eb4' },
       component: <VSCode />,
+      docs: 'https://code.visualstudio.com/docs/editor/userdefinedsnippets',
     },
-    Atom: {
+    "Atom": {
       style: { backgroundColor: '#40a977' },
       component: <Atom />,
+      docs: 'http://flight-manual.atom.io/using-atom/sections/snippets/',
+    },
+    "Sublime Text": {
+      style: { backgroundColor: '#F59821' },
+      component: <Sublime />,
+      docs:
+        'https://sublime-text.readthedocs.io/en/stable/extensibility/snippets.html',
     },
   }
 

@@ -6,24 +6,24 @@ import Sublime from '../components/Sublime'
 const ModeContext = React.createContext()
 
 function ModeProvider(props) {
-  const [mode, setMode] = useState('VSCode')
+  const [mode, setMode] = useState('VS Code')
 
   const allModeProperties = {
-    VSCode: {
+    "VS Code": {
       style: { backgroundColor: '#006eb4' },
       component: <VSCode />,
       docs: 'https://code.visualstudio.com/docs/editor/userdefinedsnippets',
     },
-    Atom: {
+    "Atom": {
       style: { backgroundColor: '#40a977' },
       component: <Atom />,
       docs: 'http://flight-manual.atom.io/using-atom/sections/snippets/',
     },
-    Sublime: {
+    "Sublime Text": {
       style: { backgroundColor: '#F59821' },
       component: <Sublime />,
       docs:
-        'http://docs.sublimetext.info/en/latest/extensibility/snippets.html',
+        'https://sublime-text.readthedocs.io/en/stable/extensibility/snippets.html',
     },
   }
 

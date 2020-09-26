@@ -38,43 +38,15 @@ export default compName
 
 As we can see, creating these by hand is annoying, so we'll make an app that can construct these for us.
 
+So, let's check out what the finished product will look like (show off the app found in this scripts folder).
 
-
-LETS LOOK AT HOW THE FINISHED PRODUCT LOOKS
-
-IMAGE OF COLORED BOXES
-
-IMAGE OF COMPONENT TREE
-
-
-
-Todo:
-
-~~Add stuff about vs code~~
-
-~~add info about code snippets~~
-
-update SG to contain color instead of style
-
-~~create steps for snippet generator~~
-
-Create images for snippet generator (comp tree + colored boxes)
-
-add one more hw on creating a github io app
-
-Create individual HW assignments for week 4
-
-Split up HW 4 code
-
-write readme for HW 4
-
-write readme for week 4
+([Go over the structure of the app](https://docs.google.com/presentation/d/1OYkOPRzi_jwwtAfNcGqEw1-Fde_IIPbSOZgIzfkR81c/edit?usp=sharing))
 
 ### Creating our Snippet Generator
 
 **Steps:**
 
-1. create-react-app and remove extraneous
+1. create-react-app and remove extraneous files. Install 
 2. `App.js`: Create state for `input` and `mode` and add `<div>` with `className="app"`
 3. Create `SnippetInput.js` and `SnippetOutput.js` files with `className="app_half"` and add instances in `App.js`
 4. `SnippetInput.js`: Write remainder with placeholders for `inputs`, `textareaRef`, and `onInput`

@@ -83,14 +83,14 @@ function App() {
 
   /****************************** Code for Mode ******************************/
 
-  const [mode, setMode] = useState('VSCode')
+  const [mode, setMode] = useState('VS Code')
 
   const allModeProperties = {
-    VSCode: {
+    "VS Code": {
       style: { backgroundColor: '#006eb4' }, //is this obsolete?
       component: <VSCode />,
     },
-    Atom: {
+    "Atom": {
       style: { backgroundColor: '#40a977' },
       component: <Atom />,
     },

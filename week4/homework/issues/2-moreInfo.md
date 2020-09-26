@@ -4,7 +4,9 @@ Fantastic work, our users really like the new Sublime addition. However, some us
 
 Your assignment will be to create an `<Info />` component and place it at the bottom of `app__bottom` in `SnippetInput.js`. It should be displayed as seen in the gif.
 
-(INSERT GIF FROM IMAGES/)
+<p align="center">
+  <img src="https://github.com/bitprj/Bitcamp-React/blob/master/week4/homework/issues/images/fullInfo.gif" alt="fullInfo" />
+</p>
 
 `<Info />` will state how to create a placeholder in our app and provide the users with a link the the documentation for the current editor selected. The link the the documentation should change color as well depending on the editor.
 

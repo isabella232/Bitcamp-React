@@ -4,6 +4,8 @@ This week we'll be going over the `useEffect`, `useRef`, and `useContext` hooks.
 
 ### useEffect
 
+The useEffect hook can be viewed as a combination of the class lifecycle methods componentDidMount, componentDidUpdate and componentDidUnmount and it enables us to add side effects when our component renders. By using this hook, we are telling our code that we need to do something or have an effect after each render. UseEffect by default will run after the initial render or mount and after each update and it allows us to access our state variables and our props without the need of an API to read them.
+
 ```jsx
 import React, { useState, useEffect } from 'react'
 
@@ -151,6 +153,8 @@ Empty Array passed in to useEffect as parameter so it is only called on mount. C
 
 ### useRef
 
+The useRef hook returns a mutable object or an object that can be changed whose property `.current` is initialized to the passed argument. This hook acts like a box that holds a mutable value in its `.current` property. Refs can be used to access DOM nodes using `ref = {createdRef}` which will set the `.current` property to the DOM node value whenever it updates. An interesting point about this hook is that mutating the `.current` property does not cause a rerender.
+
 Show a ref
 
 ```jsx
@@ -257,6 +261,8 @@ export default Hello
 This implements useRef to count the number of renders. Unlike our previous example with useState and useEffect that resulted in an infinite loop, useRef does not cause the component to rerender which enables us to count the number of times we update. 
 
 ### useContext
+
+UseContext hook shares data that can be considered "Global" for a group of components. The information impacts all of these components so this hook can be implemented to store the global data and avoid prop drilling through multiple intermediate components. 
 
 Do useContext during the construction of Todo
 
